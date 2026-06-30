@@ -105,27 +105,25 @@
         const REPO = 'signxer/ccbu-auto-release';
         async function load() {
             try {
-                const res = await fetch(`https://api.github.com/repos/${REPO}/releases/latest`);
+                const res = await fetch('releases.json');
                 if (!res.ok) throw new Error('No releases');
                 const data = await res.json();
-                document.getElementById('version').textContent = 'v' + data.tag_name.replace('v','');
+                document.getElementById('version').textContent = data.tag;
                 const box = document.getElementById('downloads');
                 box.innerHTML = '';
-                const icons = { 'windows': '🪟', 'macos': '🍎' };
+                const icons = { 'Windows': '🪟', 'macOS': '🍎' };
                 for (const a of data.assets) {
-                    const isWin = a.name.toLowerCase().includes('windows') || a.name.endsWith('.exe');
-                    const isMac = a.name.toLowerCase().includes('macos') || a.name.endsWith('.dmg');
-                    const icon = isWin ? icons.windows : isMac ? icons.macos : '📦';
-                    const label = isWin ? 'Windows' : isMac ? 'macOS' : a.name;
-                    const desc = isWin ? 'Windows 10/11 (64-bit)' : isMac ? 'macOS 12+ (Intel/Apple Silicon)' : a.name;
+                    if (a.size === 0) continue;
+                    const icon = icons[a.name] || '📦';
+                    const desc = a.name === 'Windows' ? 'Windows 10/11 (64-bit)' : 'macOS 12+ (Intel/Apple Silicon)';
                     const size = (a.size / 1024 / 1024).toFixed(1) + ' MB';
                     const card = document.createElement('a');
                     card.className = 'card';
-                    card.href = a.browser_download_url;
+                    card.href = `https://github.com/${REPO}/releases/download/${data.tag}/${a.file}`;
                     card.innerHTML = `
                         <div class="card-icon">${icon}</div>
                         <div class="card-info">
-                            <div class="card-title">${label}</div>
+                            <div class="card-title">${a.name}</div>
                             <div class="card-desc">${desc}</div>
                         </div>
                         <div class="card-size">${size}</div>
