@@ -1,0 +1,38 @@
+name: Sync Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag (e.g. v1.2.1)'
+        required: true
+      windows_url:
+        description: 'Windows EXE download URL'
+        required: false
+      macos_url:
+        description: 'macOS DMG download URL'
+        required: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download assets
+        run: |
+          mkdir -p assets
+          if [ -n "${{ inputs.windows_url }}" ]; then
+            curl -L -o "assets/CCBU-Auto-${{ inputs.tag }}-Windows.exe" "${{ inputs.windows_url }}"
+          fi
+          if [ -n "${{ inputs.macos_url }}" ]; then
+            curl -L -o "assets/CCBU-Auto-${{ inputs.tag }}-macOS.dmg" "${{ inputs.macos_url }}"
+          fi
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ inputs.tag }}
+          name: "润物细无声 ${{ inputs.tag }}"
+          generate_release_notes: true
+          files: assets/*
