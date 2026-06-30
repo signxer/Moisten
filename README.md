@@ -8,11 +8,6 @@
   <em>随风潜入夜，润物细无声。</em>
 </p>
 
-<p align="center">
-  <a href="https://signxer.github.io/Moisten/">下载</a> ·
-  <a href="https://github.com/signxer/CCBU-Auto">源码</a>
-</p>
-
 ---
 
 有些事，不必亲力亲为。
