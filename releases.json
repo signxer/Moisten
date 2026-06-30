@@ -1,7 +1,7 @@
 {
   "tag": "v1.2.3",
   "assets": [
-    {"name": "Windows", "file": "CCBU-Auto-1.2.3-Windows.exe", "size": 76634746},
-    {"name": "macOS", "file": "CCBU-Auto-1.2.3-macOS.dmg", "size": 75628862}
+    {"name": "Windows", "file": "CCBU-Auto-v1.2.3-Windows.exe", "size": 76634746},
+    {"name": "macOS", "file": "CCBU-Auto-v1.2.3-macOS.dmg", "size": 75628862}
   ]
 }
