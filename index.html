@@ -3,97 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>润物细无声 - 下载</title>
+    <title>润物 Moisten - 下载</title>
     <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@latest/font/lucide.min.css">
     <style>
+        :root {
+            --bg: #ffffff;
+            --bg-card: #f8f9fa;
+            --bg-card-hover: #f0f1f3;
+            --border: #e5e7eb;
+            --border-hover: #3b82f6;
+            --text: #111827;
+            --text-secondary: #6b7280;
+            --text-muted: #9ca3af;
+            --accent: #3b82f6;
+            --accent-bg: rgba(59,130,246,0.08);
+            --version-bg: rgba(59,130,246,0.1);
+            --version-text: #2563eb;
+            --size-bg: #f3f4f6;
+            --size-text: #6b7280;
+            --error: #ef4444;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-hover: 0 10px 25px rgba(0,0,0,0.08), 0 4px 10px rgba(0,0,0,0.04);
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --bg-card: #1e293b;
+                --bg-card-hover: #273548;
+                --border: #334155;
+                --border-hover: #60a5fa;
+                --text: #f1f5f9;
+                --text-secondary: #94a3b8;
+                --text-muted: #64748b;
+                --accent: #60a5fa;
+                --accent-bg: rgba(96,165,250,0.1);
+                --version-bg: rgba(96,165,250,0.15);
+                --version-text: #60a5fa;
+                --size-bg: #334155;
+                --size-text: #94a3b8;
+                --error: #f87171;
+                --shadow: 0 1px 3px rgba(0,0,0,0.3);
+                --shadow-hover: 0 10px 25px rgba(0,0,0,0.4);
+            }
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-            background: #0f0f23;
-            color: #e0e0e0;
+            background: var(--bg);
+            color: var(--text);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: background 0.3s, color 0.3s;
         }
         .container {
-            max-width: 520px;
+            max-width: 480px;
             width: 100%;
-            padding: 40px 32px;
+            padding: 48px 32px;
             text-align: center;
         }
         .icon {
-            width: 96px;
-            height: 96px;
-            border-radius: 20px;
-            margin-bottom: 24px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
         }
         h1 {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
-            color: #fff;
-            margin-bottom: 8px;
+            color: var(--text);
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+        }
+        h1 span {
+            color: var(--text-muted);
+            font-weight: 400;
+            font-size: 24px;
+            margin-left: 8px;
         }
         .subtitle {
-            color: #888;
+            color: var(--text-muted);
             font-size: 14px;
-            margin-bottom: 40px;
+            margin-bottom: 32px;
         }
         .version {
             display: inline-block;
-            background: rgba(137,180,250,0.15);
-            color: #89b4fa;
-            padding: 4px 12px;
+            background: var(--version-bg);
+            color: var(--version-text);
+            padding: 4px 14px;
             border-radius: 20px;
             font-size: 13px;
-            margin-bottom: 32px;
+            font-weight: 500;
+            margin-bottom: 28px;
+            animation: fadeIn 0.5s ease;
         }
-        .cards { display: flex; flex-direction: column; gap: 12px; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .cards { display: flex; flex-direction: column; gap: 10px; }
         .card {
             display: flex;
             align-items: center;
-            gap: 16px;
-            background: #1a1a2e;
-            border: 1px solid #2a2a3e;
+            gap: 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
             border-radius: 12px;
-            padding: 16px 20px;
+            padding: 14px 18px;
             text-decoration: none;
             color: inherit;
-            transition: all 0.2s;
+            box-shadow: var(--shadow);
+            transition: all 0.2s ease;
+            animation: slideUp 0.4s ease backwards;
+        }
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .card:hover {
-            background: #22223a;
-            border-color: #89b4fa;
+            background: var(--bg-card-hover);
+            border-color: var(--border-hover);
+            box-shadow: var(--shadow-hover);
             transform: translateY(-2px);
         }
         .card-icon {
-            font-size: 28px;
-            width: 48px;
-            text-align: center;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent-bg);
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+        .card-icon svg {
+            width: 22px;
+            height: 22px;
+            color: var(--accent);
         }
         .card-info { flex: 1; text-align: left; }
-        .card-title { font-size: 16px; font-weight: 600; color: #fff; }
-        .card-desc { font-size: 13px; color: #888; margin-top: 2px; }
+        .card-title { font-size: 15px; font-weight: 600; color: var(--text); }
+        .card-desc { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
         .card-size {
             font-size: 12px;
-            color: #666;
-            background: #1a1a2e;
-            padding: 4px 10px;
+            color: var(--size-text);
+            background: var(--size-bg);
+            padding: 3px 10px;
             border-radius: 6px;
+            font-weight: 500;
         }
         .footer {
-            margin-top: 48px;
-            color: #555;
+            margin-top: 40px;
+            color: var(--text-muted);
             font-size: 12px;
         }
-        .loading { color: #666; }
+        .loading {
+            color: var(--text-muted);
+            animation: pulse 1.5s ease infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="icon.png" alt="icon" class="icon">
-        <h1>润物细无声</h1>
+        <h1>润物<span>Moisten</span></h1>
         <p class="subtitle">随风潜入夜，润物细无声</p>
         <div class="version" id="version">加载中...</div>
         <div class="cards" id="downloads">
@@ -103,6 +190,10 @@
     </div>
     <script>
         const REPO = 'signxer/Moisten';
+        const ICONS = {
+            Windows: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5L10.5 4.5V12H3V5.5Z"/><path d="M10.5 4.5L21 3V12H10.5V4.5Z"/><path d="M3 12H10.5V19.5L3 18.5V12Z"/><path d="M10.5 12H21V21L10.5 19.5V12Z"/></svg>',
+            macOS: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C9.5 2 8 3.5 8 5.5C8 7.5 10 9 12 9C14 9 16 7.5 16 5.5C16 3.5 14.5 2 12 2Z"/><path d="M18 10C15 10 13 12 12 14C11 12 9 10 6 10C3 10 2 12 2 14C2 18 6 22 12 22C18 22 22 18 22 14C22 12 21 10 18 10Z"/></svg>',
+        };
         async function load() {
             try {
                 const res = await fetch('releases.json');
@@ -111,10 +202,9 @@
                 document.getElementById('version').textContent = data.tag;
                 const box = document.getElementById('downloads');
                 box.innerHTML = '';
-                const icons = { 'Windows': '🪟', 'macOS': '🍎' };
                 for (const a of data.assets) {
                     if (a.size === 0) continue;
-                    const icon = icons[a.name] || '📦';
+                    const icon = ICONS[a.name] || '';
                     const desc = a.name === 'Windows' ? 'Windows 10/11 (64-bit)' : 'macOS 12+ (Intel/Apple Silicon)';
                     const size = (a.size / 1024 / 1024).toFixed(1) + ' MB';
                     const card = document.createElement('a');
@@ -131,7 +221,7 @@
                     box.appendChild(card);
                 }
             } catch(e) {
-                document.getElementById('downloads').innerHTML = '<p style="color:#f38ba8">暂无可用版本</p>';
+                document.getElementById('downloads').innerHTML = '<p style="color:var(--error)">暂无可用版本</p>';
                 document.getElementById('version').textContent = '';
             }
         }
