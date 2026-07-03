@@ -1,1 +1,1 @@
-{"tag":"v1.6.2","assets":[{"name":"Windows","file":"Moisten-1.6.2-Windows.exe","size":91924201},{"name":"macOS","file":"Moisten-1.6.2-macOS.dmg","size":84900173}],"notes":"- feat: \u5173\u95ed\u7a97\u53e3\u4e8c\u6b21\u786e\u8ba4"}
+{"tag":"v1.6.3","assets":[{"name":"Windows","file":"Moisten-1.6.3-Windows.exe","size":91923577},{"name":"macOS","file":"Moisten-1.6.3-macOS.dmg","size":86490582}],"notes":"- fix: \u9000\u51fa\u65f6\u5173\u95ed\u6d4f\u89c8\u5668\n- chore: VERSION 1.6.1"}
