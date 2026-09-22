@@ -25,6 +25,8 @@ Moisten 在你看不见的地方，安静地替你完成那些重复的、耗时
 
 前往 [下载页面](https://signxer.github.io/Moisten/) 获取最新版本。
 
+下载页面默认通过 [gh-proxy](https://gh-proxy.com/) 加速 GitHub Release 下载。
+
 首次运行需安装环境：
 
 ```bash
@@ -35,4 +37,3 @@ python -m playwright install chromium
 ### 许可
 
 MIT
-
