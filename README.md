@@ -25,7 +25,7 @@ Moisten 在你看不见的地方，安静地替你完成那些重复的、耗时
 
 前往 [下载页面](https://signxer.github.io/Moisten/) 获取最新版本。
 
-下载页面默认通过 [gh-proxy](https://gh-proxy.com/) 加速 GitHub Release 下载。
+下载页面默认通过 [gh-proxy](https://gh-proxy.org/) 加速 GitHub Release 下载。
 
 下载的打包版本无需额外安装运行环境，下载后即可直接运行。若从源码运行，再安装开发依赖：
 
