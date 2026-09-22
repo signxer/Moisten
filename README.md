@@ -27,7 +27,7 @@ Moisten 在你看不见的地方，安静地替你完成那些重复的、耗时
 
 下载页面默认通过 [gh-proxy](https://gh-proxy.com/) 加速 GitHub Release 下载。
 
-首次运行需安装环境：
+下载的打包版本无需额外安装运行环境，下载后即可直接运行。若从源码运行，再安装开发依赖：
 
 ```bash
 pip install -r requirements.txt
