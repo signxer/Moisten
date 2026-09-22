@@ -1,1 +1,1 @@
-{"tag":"v2.2.0","assets":[{"name":"Windows","file":"Moisten-2.2.0-Windows.exe","size":92181924},{"name":"macOS","file":"Moisten-2.2.0-macOS.dmg","size":85544692}],"notes":"- release: v2.2.0 settings navigation update fix\n- docs: consolidate v2.1.0 changelog\n- chore: VERSION 2.1.0\n- docs: CHANGELOG 2.1.0"}
+{"tag":"v2.2.1","assets":[{"name":"Windows","file":"Moisten-2.2.1-Windows.exe","size":92184634},{"name":"macOS","file":"Moisten-2.2.1-macOS.dmg","size":85545612}],"notes":"- release: v2.2.1 shutdown and settings fixes"}
