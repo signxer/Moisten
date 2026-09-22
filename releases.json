@@ -1,1 +1,1 @@
-{"tag":"v2.2.3","assets":[{"name":"Windows","file":"Moisten-2.2.3-Windows.exe","size":91298634},{"name":"macOS","file":"Moisten-2.2.3-macOS.dmg","size":83610775}],"notes":"- release: v2.2.3 dashboard and dialog fixes\n- chore: VERSION 2.2.1\n- docs: CHANGELOG 2.2.1"}
+{"tag":"v2.2.4","assets":[{"name":"Windows","file":"Moisten-2.2.4-Windows.exe","size":98210329},{"name":"macOS","file":"Moisten-2.2.4-macOS.dmg","size":83611310}],"notes":"- release: v2.2.4 motion and icon fixes\n- chore: VERSION 2.2.2\n- docs: CHANGELOG 2.2.2"}
