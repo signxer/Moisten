@@ -1,1 +1,1 @@
-{"tag":"v2.0.0","assets":[{"name":"Windows","file":"Moisten-2.0.0-Windows.exe","size":92170638},{"name":"macOS","file":"Moisten-2.0.0-macOS.dmg","size":85531815}],"notes":"- release: v2.0.0 stability fixes\n- chore: VERSION 1.9.10\n- docs: CHANGELOG 1.9.10"}
+{"tag":"v2.1.0","assets":[{"name":"Windows","file":"Moisten-2.1.0-Windows.exe","size":92179646},{"name":"macOS","file":"Moisten-2.1.0-macOS.dmg","size":85540431}],"notes":"- release: v2.1.0 blue-gray UI refresh\n- docs: consolidate v2.0.0 changelog\n- chore: VERSION 2.0.0\n- docs: CHANGELOG 2.0.0"}
