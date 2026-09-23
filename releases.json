@@ -1,1 +1,1 @@
-{"tag":"v2.3.4","assets":[{"name":"Windows","file":"Moisten-2.3.4-Windows.exe","size":98227395},{"name":"macOS","file":"Moisten-2.3.4-macOS.dmg","size":83627015}],"notes":"- release: v2.3.4 fix dashboard task alignment"}
+{"tag":"v2.3.5","assets":[{"name":"Windows","file":"Moisten-2.3.5-Windows.exe","size":98227270},{"name":"macOS","file":"Moisten-2.3.5-macOS.dmg","size":83627116}],"notes":"- release: v2.3.5 fix missing opacity effect import"}
