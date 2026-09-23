@@ -1,1 +1,1 @@
-{"tag":"v2.2.7","assets":[{"name":"Windows","file":"Moisten-2.2.7-Windows.exe","size":98213049},{"name":"macOS","file":"Moisten-2.2.7-macOS.dmg","size":83611667}],"notes":"- release: v2.2.7 fix online course entry and Windows updater\n- chore: VERSION 2.2.6\n- docs: CHANGELOG 2.2.6"}
+{"tag":"v2.2.8","assets":[{"name":"Windows","file":"Moisten-2.2.8-Windows.exe","size":98215183},{"name":"macOS","file":"Moisten-2.2.8-macOS.dmg","size":83614593}],"notes":"- release: v2.2.8 improve network study recovery and UI"}
