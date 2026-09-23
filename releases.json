@@ -1,1 +1,1 @@
-{"tag":"v2.2.6","assets":[{"name":"Windows","file":"Moisten-2.2.6-Windows.exe","size":98211735},{"name":"macOS","file":"Moisten-2.2.6-macOS.dmg","size":83611702}],"notes":"- release: v2.2.6 sync goal progress indicators\n- chore: VERSION 2.2.5\n- docs: CHANGELOG 2.2.5"}
+{"tag":"v2.2.7","assets":[{"name":"Windows","file":"Moisten-2.2.7-Windows.exe","size":98213049},{"name":"macOS","file":"Moisten-2.2.7-macOS.dmg","size":83611667}],"notes":"- release: v2.2.7 fix online course entry and Windows updater\n- chore: VERSION 2.2.6\n- docs: CHANGELOG 2.2.6"}
