@@ -1,1 +1,1 @@
-{"tag":"v2.3.3","assets":[{"name":"Windows","file":"Moisten-2.3.3-Windows.exe","size":98227815},{"name":"macOS","file":"Moisten-2.3.3-macOS.dmg","size":83626031}],"notes":"- release: v2.3.3 polish progress and worker motion"}
+{"tag":"v2.3.4","assets":[{"name":"Windows","file":"Moisten-2.3.4-Windows.exe","size":98227395},{"name":"macOS","file":"Moisten-2.3.4-macOS.dmg","size":83627015}],"notes":"- release: v2.3.4 fix dashboard task alignment"}
