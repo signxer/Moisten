@@ -206,7 +206,12 @@
                 for (const a of data.assets) {
                     if (a.size === 0) continue;
                     const icon = ICONS[a.name] || '';
-                    const desc = a.name === 'Windows' ? 'Windows 10/11 (64-bit)' : 'macOS 12+ (Intel/Apple Silicon)';
+                    const isMacPkg = a.name === 'macOS' && /\.pkg$/i.test(a.file || '');
+                    const desc = a.name === 'Windows'
+                        ? 'Windows 10/11 (64-bit)'
+                        : isMacPkg
+                            ? 'macOS 安装器 · 双击安装'
+                            : 'macOS 12+ (Intel/Apple Silicon)';
                     const size = (a.size / 1024 / 1024).toFixed(1) + ' MB';
                     const card = document.createElement('a');
                     card.className = 'card';
